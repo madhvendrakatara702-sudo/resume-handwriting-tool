@@ -371,3 +371,103 @@ p {
 #resumeOutput h2 {
   page-break-before: always;
 }
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* NAV BUTTONS */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* BUTTON STYLE */
+.nav-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #5b6cff;
+  color: white;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* TEXTAREA */
+textarea {
+  width: 100%;
+  min-height: 120px;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* OUTPUT */
+#pages {
+  margin-top: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* FLOAT BUTTON */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-buttons button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  textarea {
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+}
