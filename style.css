@@ -72,6 +72,9 @@ body.dark{
 background:#121212;
 color:white;
 }
+header {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+}
 
 body.dark header{
 background:#1e1e1e;
