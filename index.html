@@ -22,13 +22,18 @@ emailjs.init("EDYcpL_YYCEt87fnl");
 </script>
 <!-- NAVBAR -->
 <header>
-<div class="logo">✍️ Handwriting Pro</div>
-<nav class="nav-buttons">
-  <button onclick="showPage('home')">Home</button>
-  <button onclick="showPage('about')">About</button>
-  <button onclick="showPage('contact')">Contact</button>
-  <button onclick="showPage('privacy')">Privacy</button>
-</nav>
+  <div class="logo">✍️ Handwriting Pro</div>
+
+  <!-- Hamburger Button -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Menu -->
+  <nav id="menu">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('about')">About</button>
+    <button onclick="showPage('contact')">Contact</button>
+    <button onclick="showPage('privacy')">Privacy</button>
+  </nav>
 </header>
 
 <!-- HOME -->
@@ -181,6 +186,13 @@ If you have any questions, suggestions, or feedback, feel free to contact us usi
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2/dist/tesseract.min.js"></script>
 
 <script src="script.js"></script>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
 
 </body>
 </html>
