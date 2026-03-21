@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handwriting Pro AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&family=Satisfy&family=Patrick+Hand&family=Indie+Flower&family=Caveat&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Kalam&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("EDYcpL_YYCEt87fnl");
+})();
+</script>
+<!-- NAVBAR -->
+<header>
+<div class="logo">✍️ Handwriting Pro</div>
+<nav>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('contact')">Contact</button>
+<button onclick="showPage('privacy')">Privacy</button>
+</nav>
+</header>
+
+<!-- HOME -->
+<div id="home" class="container">
+
+<textarea id="inputText" placeholder="Type your text..."></textarea>
+
+<div id="pages"></div>
+
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="pageSection">
+<h2>About</h2>
+
+<p>
+Handwriting Pro AI is a smart and easy-to-use web tool that converts digital text into realistic handwritten format. 
+It is designed to help students, teachers, and professionals create neat handwritten notes, assignments, and documents quickly and efficiently.
+</p>
+
+<p>
+With this tool, you can easily convert typed text into natural-looking handwriting using different styles and page formats such as lined and plain pages.
+</p>
+
+<p>
+This website uses advanced technologies like OCR (Optical Character Recognition), which allows you to extract text from images and PDFs and convert it into handwritten format.
+</p>
+
+<p>
+Handwriting Pro AI also provides a resume builder feature that helps you quickly create and download professional resumes.
+</p>
+
+<p>
+Our goal is to provide users with a simple, fast, and reliable platform where they can complete their work without any complicated process.
+</p>
+
+<p>
+In the future, we plan to add more features such as multiple handwriting styles, dark mode, and better customization options to improve user experience.
+</p>
+
+<p><b>Made with ❤️ for students and creators.</b></p>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="pageSection">
+<h2>Contact Us</h2>
+
+<p>Email: madhvendrakatara819@gmail.com</p>
+
+<p>
+If you have any questions, suggestions, or feedback, feel free to contact us using the form below.
+</p>
+
+<!-- CONTACT FORM -->
+<h2>Contact Us</h2>
+<input type="text" id="user_name" placeholder="Your Name">
+<input type="email" id="user_email" placeholder="Your Email">
+<textarea id="message" placeholder="Your Message"></textarea>
+
+<button onclick="sendMail()">Send Message</button>
+</div>
+
+<!-- PRIVACY -->
+<div id="privacy" class="pageSection">
+<h2>Privacy Policy</h2>
+<p>We respect your privacy and ensure that all data remains secure. This website does not store any personal information entered by users. All processing is done locally in your browser.</p>
+<p>Your uploaded files such as images or PDFs are not saved on any server and are used only for temporary processing.</p>
+<p>We do not share any personal data with third parties.</p>
+<p>This website may use cookies for improving user experience.</p>
+<p>We ensure that your content remains private and secure.</p>
+<p>No login or account information is required to use this tool.</p>
+<p>We may update our privacy policy in the future.</p>
+<p>By using this site, you agree to our privacy practices.</p>
+<p>If you have any concerns, feel free to contact us.</p>
+</div>
+
+<!-- CONTROLS -->
+<div class="controls">
+
+<select id="pageType">
+<option value="lined">Lined</option>
+<option value="plain">Plain</option>
+</select>
+
+<select id="fontType">
+  <option value="Kalam">✍️ Real Handwriting (Best)</option>
+  <option value="Noto Sans Devanagari">Hindi Writing 🇮🇳</option>
+  <option value="Satisfy">🖊️ Smooth Pen</option>
+  <option value="Patrick Hand">Handwriting 1</option>
+  <option value="Indie Flower">Handwriting 2</option>
+  <option value="Caveat">Handwriting 3</option>
+  <option value="Shadows Into Light">Handwriting 4</option>
+</select>
+
+</select>
+
+<input type="number" id="fontSize" value="24">
+<input type="number" id="lineSpacing" value="32">
+
+<button onclick="convertText()">Convert</button>
+<button onclick="downloadPDF()">PDF</button>
+
+</div>
+
+<!-- FLOAT BUTTON -->
+<div class="fab" onclick="toggleMenu()">+</div>
+
+<div id="menu" class="menu">
+<button onclick="document.getElementById('pdfInput').click()">📄 PDF</button>
+<button onclick="document.getElementById('imgInput').click()">🖼 Image</button>
+<button onclick="openResume()">📑 Resume</button>
+</div>
+
+<input type="file" id="pdfInput" hidden>
+<input type="file" id="imgInput" hidden>
+
+<!-- RESUME MODAL -->
+<div id="resumeModal" class="resumeModal">
+<div class="resumeBox">
+<span class="closeBtn" onclick="closeResume()">✖</span>
+
+<h2>Create Resume</h2>
+
+<label>Select Text Color:</label>
+<input type="color" id="textColor" value="#000000">
+
+<input id="name" placeholder="Full Name">
+<input id="email" placeholder="@gmail.com">
+<input id="phone" placeholder="+91">
+<input id="address" placeholder="Address">
+
+
+<textarea id="skills" placeholder="Skills"></textarea>
+<textarea id="education" placeholder="Education"></textarea>
+<textarea id="experience" placeholder="Experience"></textarea>
+<textarea id="projects" placeholder="Projects"></textarea>
+
+<button onclick="generateResume()">Generate</button>
+<button onclick="downloadResume()">Download</button>
+
+<div id="resumeOutput"></div>
+
+</div>
+</div>
+
+<!-- LIBRARIES -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@2/dist/tesseract.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
