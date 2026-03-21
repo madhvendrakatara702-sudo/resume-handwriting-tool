@@ -57,6 +57,9 @@ transition:0.3s;
   left: 0;
   width: 100%;
   height: 100%;
+  .resumeModal {
+  display: none;   /* 👈 ye add karo */
+}
 }
 
 textarea:focus{
@@ -235,13 +238,8 @@ transform:scale(1.1);
 }
 /* RESUME MODAL BACKGROUND */
 .resumeModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
- z-index:1000;
+  display: none;   /* 👈 ye add karo */
+}
 }
 
 /* RESUME BOX */
@@ -256,13 +254,6 @@ transform:scale(1.1);
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* CLOSE BUTTON */
-.closeBtn {
-  float: right;
-  cursor: pointer;
-  font-size: 20px;
-  color: red;
-}
 
 /* INPUT STYLING */
 .resumeBox input,
@@ -424,16 +415,6 @@ p {
 body {
   font-family: Arial, sans-serif;
 }
-
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  flex-wrap: wrap;
-}
-
 
 
 /* BUTTON STYLE */
