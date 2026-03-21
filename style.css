@@ -88,6 +88,10 @@ background:#1e1e1e;
 .menu button:hover{
 background:linear-gradient(135deg,#38f9d7,#43e97b);
 }
+.menu button {
+  width: 150px;      /* fix width */
+  display: block;
+}
 button:hover{
 transform:translateY(-2px);
 box-shadow:0 6px 15px rgba(0,0,0,0.2);
@@ -183,22 +187,23 @@ transition:0.3s;
 .fab:hover{
 transform:scale(1.1);
 }
-.menu{
+.menu {
   position: fixed;
   bottom: 150px;
   right: 20px;
 
-  display: flex;              /* 🔥 change */
-  flex-direction: column;     /* already correct */
+  display: none;
+  flex-direction: column;
   gap: 10px;
-
-  display: none;              /* hidden by default */
+  align-items: flex-end;   /* 🔥 important */
 }
 
-.menu.active{
+.menu.active {
   display: flex;
 }
-
+.menu {
+  flex-wrap: nowrap;
+}
 /* RESUME MODAL BACKGROUND */
 .resumeModal {
   position: fixed;
