@@ -37,7 +37,7 @@ emailjs.init("EDYcpL_YYCEt87fnl");
 </header>
 
 <!-- HOME -->
-<div id="home" class="container">
+<div id="home" class="pageSection container">
 
 <textarea id="inputText" placeholder="Type your text..."></textarea>
 
@@ -191,8 +191,14 @@ If you have any questions, suggestions, or feedback, feel free to contact us usi
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("active");
 }
-</script>
 
+function showPage(pageId) {
+  let pages = document.querySelectorAll(".pageSection");
+  pages.forEach(p => p.style.display = "none");
+
+  document.getElementById(pageId).style.display = "block";
+}
+</script>
 
 </body>
 </html>
