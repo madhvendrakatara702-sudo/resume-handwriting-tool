@@ -130,6 +130,14 @@ border-radius:20px;
 background:linear-gradient(135deg,#667eea,#764ba2);
 }
 
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .controls button:hover{
 background:linear-gradient(135deg,#5a67d8,#6b46c1);
 }
