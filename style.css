@@ -471,3 +471,68 @@ textarea {
     font-size: 18px;
   }
 }
+/* ===== HAMBURGER MENU ===== */
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Menu button */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Nav menu */
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+nav button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  background: #5b6cff;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide menu by default */
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Show menu when active */
+  nav.active {
+    display: flex;
+  }
+
+  nav button {
+    width: 100%;
+    text-align: left;
+  }
+}
