@@ -248,19 +248,21 @@ transform:scale(1.1);
 .menu {
   flex-wrap: nowrap;
 }
-/* RESUME MODAL BACKGROUND */
-.resumeModal {
-  display: none;   /* 👈 ye add karo */
-}
-}
 
 /* RESUME BOX */
 .resumeBox {
   background: #fff;
-  width: 400px;
+ width:90%;
+  max-width:400px;
+  
   max-height: 90vh;
   overflow-y: auto;
+
+  margin:50px auto;
+  
   padding: 25px;
+  padding-bottom:50px;
+  
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   font-family: 'Segoe UI', sans-serif;
@@ -281,14 +283,24 @@ transform:scale(1.1);
 
 /* BUTTONS */
 .resumeBox button {
-  padding: 10px 15px;
+  padding: 12px 15px;
   margin-top: 10px;
+
+  width:100%;
+  
   border: none;
   border-radius: 20px;
+  
   background: linear-gradient(45deg,#4facfe,#00f2fe);
   color: white;
+  
   font-weight: bold;
+  font-size:16px;
+  
   cursor: pointer;
+}
+.resumeBox button:hover{
+  opacity:0.9;
 }
 
 /* OUTPUT DESIGN (PRO LOOK) */
